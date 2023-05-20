@@ -1,0 +1,60 @@
+
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    gap: 2em;
+}
+
+@mixin images{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.about{
+  
+    &__container{
+        @include grid();
+    }
+
+   &__image{
+       @include images();
+   }
+  
+}
+
+.conversations{
+  
+    &__container{
+        @include grid();
+    }
+
+   &__image{
+       @include images();
+   }
+  
+}
+
+.users{
+  
+    &__container{
+        @include grid();
+    }
+
+   &__image{
+       @include images();
+   }
+  
+}
+
+.gstart{
+    &__container{
+        text-align: center;
+        
+    }
+}
+

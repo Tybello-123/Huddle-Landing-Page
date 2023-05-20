@@ -1,0 +1,45 @@
+@use '../globals/boilerplate';
+main{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.hero{
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin: 5em auto 0em;
+    }
+
+
+    &__image{
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+
+}
+
+.hero-grid{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__heading{
+        font-size: 3rem;
+        font-weight: 700;
+        font-family: var(--heading-font-family);
+        margin-bottom: 0;
+    }
+
+    &__paragraph{
+        margin-top: 1.5em;
+        text-align: center;
+
+    }
+}

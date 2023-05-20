@@ -1,0 +1,33 @@
+@use "../globals/typography";
+
+
+@mixin flex {
+    display: flex;
+     align-items: flex-start;
+     justify-content: start;
+}
+
+.footer{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: space-between;
+  align-items: start;
+  gap: 10em;
+  padding: 5em;
+  margin-bottom: 0;
+  background-color: var(--very-dark-cyan);
+ 
+  color: var( --font-color2);
+  
+
+  &__container1{
+   
+    @include flex();
+
+
+  }
+
+  &__container2{
+    @include flex();
+  }
+}

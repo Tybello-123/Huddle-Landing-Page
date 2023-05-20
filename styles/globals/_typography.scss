@@ -1,0 +1,43 @@
+
+
+
+.heading{
+    font-family: var(--heading-font-family);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.paragraph{
+    font-family: var(--body-font-family);
+    font-weight: 300;
+    margin-top: 0;
+    font-size: 1rem;
+
+}
+
+.heading--small{
+    font-weight: 500;
+    font-size: 1.2rem;
+    
+}
+
+.paragraph--light{
+    font-weight: 300;
+   
+    
+}
+
+.paragraph--small{
+    font-weight: 300;
+    font-size: 1rem;
+    
+}
+
+
+
+
+a, a:visited,a:active{
+   text-decoration: none;
+}
