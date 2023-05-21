@@ -1,4 +1,4 @@
-
+@use "../utilities/font";
 
 
 .heading{
@@ -18,20 +18,32 @@
 }
 
 .heading--small{
-    font-weight: 500;
-    font-size: 1.2rem;
-    
+  margin-bottom: 0;
 }
 
 .paragraph--light{
-    font-weight: 300;
-   
+ font-size: 0.8rem;
+ margin: 2em 0;
+ 
     
 }
 
 .paragraph--small{
-    font-weight: 300;
-    font-size: 1rem;
+   
+    font-size: 0.8rem;
+    
+}
+
+.paragraph--grey{
+   
+    font-size: 1.2rem;
+    color: var(--grey);
+    
+}
+
+.paragraph--hero{
+   
+    margin-bottom: 2em;
     
 }
 

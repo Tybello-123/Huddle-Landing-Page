@@ -1,10 +1,19 @@
 @use "../globals/typography";
 
 
-@mixin flex {
-    display: flex;
-     align-items: flex-start;
-     justify-content: start;
+// @mixin flex {
+//     display: flex;
+//      align-items: flex-start;
+//      justify-content: start;
+// }
+
+@mixin svgGrid{
+  
+    display: grid;
+    grid-template-columns: 20px 150px; 
+    grid-gap: 10px; 
+  
+  
 }
 
 .footer{
@@ -13,21 +22,74 @@
   justify-content: space-between;
   align-items: start;
   gap: 10em;
-  padding: 5em;
+  padding:5em;
   margin-bottom: 0;
   background-color: var(--very-dark-cyan);
- 
-  color: var( --font-color2);
+  color: var(--font-color2);
+  fill: white;
+  // max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  
   
 
   &__container1{
    
-    @include flex();
-
+    @include svgGrid();
+    
 
   }
 
   &__container2{
-    @include flex();
+    @include svgGrid();
   }
+
+  &__container3{
+    display:grid;
+    grid-template-columns: repeat(3,25px);
+    grid-gap: 1em;
+    width: 100px;
+    height: auto;
+    margin-top: 3em;
+   
+  }
+
+  &__container4{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  &__input{
+    width: 60%;
+    padding: 0.5em;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 767px){
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: center;
+    align-items: start;
+    gap: 5em;
+    padding: 5em;
+
+    &__section1{
+      order: 2;
+  }
+
+  &__section2{
+      order: 1;
+  }
+    
+  }
+
+  // @media screen and (max-width: 320px){
+    
+  //   padding: 10em;
+    
+  // }
 }

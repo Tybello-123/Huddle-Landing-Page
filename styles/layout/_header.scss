@@ -7,22 +7,22 @@
         display:flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: nowrap;
         padding: 3em 2em;
     }
     
     &__logo{
-        width: 150px;
+        width: 100%;
+        max-width: 150px;
         height: auto;
+
+        @media screen and (max-width: 767px){
+            width: auto;
+            max-width: 110px;
+        }
     }
 
-    &__btn{
-        width: 100px;
-        font-size: 1rem;
-        padding: 0.3em;
-        border-radius: 1.5em;
-        border: 1px solid var(--border-color);
-        background-color: var(--background-color);
-        
-    }
+   
+  
    
 }

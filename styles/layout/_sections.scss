@@ -1,13 +1,16 @@
 
 
-@mixin grid {
+@mixin grid{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
-    gap: 2em;
+    gap: 10em;
 }
+
+
+
 
 @mixin images{
     width: 100%;
@@ -15,14 +18,53 @@
     height: auto;
 }
 
+@mixin section-margins
+{
+    margin: 10em 0;
+}
+
+@mixin mobile-grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    gap: 5em;
+}
+
+@mixin mobile-images{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+@mixin mobile-section-margins
+{
+    margin: 5em 0;
+}
+
 .about{
   
     &__container{
         @include grid();
+        @include section-margins();
     }
 
    &__image{
        @include images();
+   }
+
+   @media screen and (max-width: 767px) {
+     
+    &__container{
+        @include mobile-grid();
+        @include mobile-section-margins();
+    }
+
+   &__image{
+       @include mobile-images();
+   }
    }
   
 }
@@ -31,10 +73,33 @@
   
     &__container{
         @include grid();
+        @include section-margins();
+        order:1;
     }
 
    &__image{
        @include images();
+   }
+
+   @media screen and (max-width: 767px) {
+     
+    &__container{
+        @include mobile-grid();
+        @include section-margins();
+    }
+
+    &__container1{
+        order: 2;
+    }
+
+    &__container2{
+        order: 1;
+    }
+
+
+   &__image{
+       @include mobile-section-margins();
+   }
    }
   
 }
@@ -43,10 +108,23 @@
   
     &__container{
         @include grid();
+        @include section-margins();
     }
 
    &__image{
        @include images();
+   }
+
+   @media screen and (max-width: 767px) {
+     
+    &__container{
+        @include mobile-grid();
+        @include mobile-section-margins();
+    }
+
+   &__image{
+       @include mobile-images();
+   }
    }
   
 }
@@ -54,7 +132,11 @@
 .gstart{
     &__container{
         text-align: center;
+        @include section-margins();
         
     }
 }
+
+
+
 

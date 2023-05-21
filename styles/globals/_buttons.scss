@@ -1,0 +1,47 @@
+@use "../utilities/font";
+
+.btn{
+    background-color: var(--button-color);
+    font-size: 1rem;
+    border-radius: 2em;
+    font-weight: 700;
+    font-family: var(--body-font-family);
+    padding: 1em;
+    color: var(--font-color2);
+    width: 300px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+
+    @media screen and (max-width: 767px){
+        width: 200px;
+        font-size: 0.8rem;
+    }
+}
+
+.btn--small{
+    font-weight: 500;
+    width: 100px;
+    box-shadow: none;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin-left: 1.5em;
+    font-size: 0.8rem;
+}
+
+.btn--header{
+    width: 100%;
+    max-width: 120px;
+    padding: 0.5em;
+    border: 2px solid var(--border-color);
+    background-color: var(--font-color2);
+    color: var(--font-color1);
+    font-weight: 300;
+    
+    @media screen and (max-width: 767px){
+        width: auto;
+        
+        font-size: 0.8rem;
+        box-shadow: none;
+    }
+}
