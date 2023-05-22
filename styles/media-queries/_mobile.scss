@@ -1,0 +1,67 @@
+
+@forward '../layout/sections';
+
+
+@media screen and (max-width: 767px) {
+    @mixin mobile-grid{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1em;
+        gap: 10em;
+    }
+
+    @mixin images{
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+    }
+    
+    @mixin section-margins
+    {
+        margin: 5em 0;
+    }
+
+
+
+    .about{
+  
+    &__container{
+        @include mobile-grid();
+        @include section-margins();
+    }
+
+   &__image{
+       @include images();
+   }
+  
+}
+
+.conversations{
+  
+    &__container{
+        @include mobile-grid();
+        @include section-margins();
+    }
+
+   &__image{
+       @include images();
+   }
+  
+}
+
+.users{
+  
+    &__container{
+        @include mobile-grid();
+        @include section-margins();
+    }
+
+   &__image{
+       @include images();
+   }
+  
+}
+}

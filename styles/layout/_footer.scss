@@ -1,6 +1,21 @@
 @use "../globals/typography";
 
 
+
+@mixin footer-display-bg
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    overflow: contain;
+}
+
+@mixin footer-no-display-bg
+{
+    display: none;
+   
+}
+
 // @mixin flex {
 //     display: flex;
 //      align-items: flex-start;
@@ -17,11 +32,25 @@
 }
 
 .footer{
+  &__mobile-top-img{
+    
+    @include footer-no-display-bg();
+     
+    
+ }
+
+ &__desktop-top-img{
+    @include footer-display-bg();
+  }
+  
+  
+  
+  &__wrapper{  
   display: grid;
   grid-template-columns: repeat(2,1fr);
   justify-content: space-between;
   align-items: start;
-  gap: 10em;
+  gap: 5em;
   padding:5em;
   margin-bottom: 0;
   background-color: var(--very-dark-cyan);
@@ -31,7 +60,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  
+}
   
   
 
@@ -56,6 +85,12 @@
    
   }
 
+  &__section2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
   &__container4{
     display:flex;
     justify-content: flex-start;
@@ -70,12 +105,16 @@
   }
 
   @media screen and (max-width: 767px){
-    display: grid;
+    
+
+    &__wrapper{
+   
     grid-template-columns: repeat(1,1fr);
     justify-content: center;
     align-items: start;
     gap: 5em;
     padding: 5em;
+    }
 
     &__section1{
       order: 2;
@@ -87,9 +126,19 @@
     
   }
 
-  // @media screen and (max-width: 320px){
+  @media screen and (max-width: 320px){
     
-  //   padding: 10em;
+    &__mobile-top-img{
     
-  // }
+      @include footer-display-bg();
+       
+      
+   }
+  
+   &__desktop-top-img{
+    @include footer-no-display-bg();
+      
+    }
+    
+  }
 }

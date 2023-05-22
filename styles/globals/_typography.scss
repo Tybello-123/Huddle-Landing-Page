@@ -7,6 +7,11 @@
     line-height: 1.1;
     margin-top: 0;
     font-size: 1.8rem;
+
+    @media screen and (max-width: 320px){
+        
+        font-size: 1.5rem;
+    }
 }
 
 .paragraph{

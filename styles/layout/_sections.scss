@@ -1,3 +1,4 @@
+// @import '../utilities/mixins';
 
 
 @mixin grid{
@@ -5,12 +6,10 @@
     grid-template-columns: repeat(2,1fr);
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1em;
+    width: 80%;
+    margin: 0 auto;
     gap: 10em;
 }
-
-
-
 
 @mixin images{
     width: 100%;
@@ -18,7 +17,7 @@
     height: auto;
 }
 
-@mixin section-margins
+@mixin desktop-section-margins
 {
     margin: 10em 0;
 }
@@ -29,26 +28,73 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1em;
+   margin: 0 auto;
+   width: 80%;
     gap: 5em;
 }
 
 @mixin mobile-images{
-    width: 100%;
+    width: 80%;
     max-width: 200px;
     height: auto;
 }
+
+
 
 @mixin mobile-section-margins
 {
     margin: 5em 0;
 }
 
+@mixin display-bg
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    overflow: contain;
+}
+
+@mixin no-display-bg
+{
+    display: none;
+   
+}
+
+
+
 .about{
-  
+    @include desktop-section-margins();
+   
+
+    &__mobile-top-img{
+    
+       @include no-display-bg();
+        
+       
+    }
+
+    &__desktop-top-img{
+       @include display-bg();
+     }
+
+
+     &__mobile-bottom-img{
+        @include no-display-bg();
+     }
+
+
+     &__desktop-bottom-img{
+        @include display-bg();
+     }
+
+     &__wrapper{
+        background-color: var(--very-pale-blue);
+     }
+
     &__container{
+        
         @include grid();
-        @include section-margins();
+       
     }
 
    &__image{
@@ -59,22 +105,55 @@
      
     &__container{
         @include mobile-grid();
-        @include mobile-section-margins();
+        // @include mobile-section-margins();
     }
 
    &__image{
        @include mobile-images();
    }
    }
+
+   @media screen and (max-width: 320px){
+
+    @include mobile-section-margins();
+    
+    &__mobile-top-img{
+    
+        @include display-bg();
+        
+     }
+ 
+     &__desktop-top-img{
+        @include no-display-bg();
+
+      }
+ 
+ 
+      &__mobile-bottom-img{
+        @include display-bg();
+      }
+ 
+ 
+      &__desktop-bottom-img{
+        @include no-display-bg();
+      }
+
+      &__container{
+        @include mobile-grid();
+        // @include mobile-section-margins();
+    }
+    
+  }
   
 }
 
 .conversations{
+
+    @include desktop-section-margins();
   
     &__container{
         @include grid();
-        @include section-margins();
-        order:1;
+      
     }
 
    &__image{
@@ -85,7 +164,7 @@
      
     &__container{
         @include mobile-grid();
-        @include section-margins();
+       
     }
 
     &__container1{
@@ -97,18 +176,44 @@
     }
 
 
-   &__image{
-       @include mobile-section-margins();
-   }
    }
   
 }
 
 .users{
+
+    @include desktop-section-margins();
+   
+
+    &__mobile-top-img{
+    
+       @include no-display-bg();
+        
+       
+    }
+
+    &__desktop-top-img{
+       @include display-bg();
+     }
+
+
+     &__mobile-bottom-img{
+        @include no-display-bg();
+     }
+
+
+     &__desktop-bottom-img{
+        @include display-bg();
+     }
+
+     &__wrapper{
+        background-color: var(--very-pale-blue);
+     }
+
   
     &__container{
         @include grid();
-        @include section-margins();
+      
     }
 
    &__image{
@@ -119,22 +224,67 @@
      
     &__container{
         @include mobile-grid();
-        @include mobile-section-margins();
+        // @include mobile-section-margins();
     }
 
    &__image{
        @include mobile-images();
    }
    }
+
+   @media screen and (max-width: 320px){
+
+    @include mobile-section-margins();
+    
+    &__mobile-top-img{
+    
+        @include display-bg();
+        
+     }
+ 
+     &__desktop-top-img{
+        @include no-display-bg();
+
+      }
+ 
+ 
+      &__mobile-bottom-img{
+        @include display-bg();
+      }
+ 
+ 
+      &__desktop-bottom-img{
+        @include no-display-bg();
+      }
+
+      &__container{
+        @include mobile-grid();
+        // @include mobile-section-margins();
+    }
+    
+  }
   
 }
 
+
 .gstart{
     &__container{
+        width: 100%;
+        margin: 0 auto;
         text-align: center;
-        @include section-margins();
+        @include desktop-section-margins();
         
     }
+
+   @media screen and (max-width: 320px){
+
+    &__container{
+        
+       
+        @include mobile-section-margins();
+    }
+   }
+
 }
 
 
