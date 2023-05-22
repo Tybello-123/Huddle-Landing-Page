@@ -11,11 +11,16 @@
     width: 300px;
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
+    cursor: pointer;
 
     @media screen and (max-width: 767px){
         width: 250px;
         font-size: 0.8rem;
+    }
+
+    &:hover{
+        background-color: var(--button-hover-color);
+       
     }
 }
 
@@ -27,16 +32,26 @@
     padding: 0.5em;
     margin-left: 1em;
     font-size: 0.8rem;
+
+    &:hover{
+        background-color: var(--button-hover-color);
+      
+    }
 }
 
 .btn--header{
     width: 100%;
     max-width: 120px;
     padding: 0.5em;
-    border: 2px solid var(--border-color);
+    border: 2px solid var(--button-color);
     background-color: var(--font-color2);
     color: var(--font-color1);
     font-weight: 300;
+
+    &:hover{
+        background-color: var(--font-color2);
+        border: 2px solid var(--button-hover-color);
+    }
     
     @media screen and (max-width: 767px){
         width: auto;

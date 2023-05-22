@@ -82,12 +82,13 @@ a, a:visited, a:active {
   --background-color: white;
   --font-color1: black;
   --font-color2: white;
-  --border-color: hsl(321, 100%, 78%);
+  --button-hover-color: hsl(321, 100%, 78%);
   --button-color: hsl(322, 100%, 66%);
   --light-red: hsl(0, 100%, 63%);
   --very-dark-cyan: hsl(192, 100%, 9%);
   --very-pale-blue: hsl(207, 100%, 98%);
   --grey: hsl(120, 1%, 54%);
+  --social-icon-hover: hsl(204, 63%, 51%);
 }
 
 .btn {
@@ -102,12 +103,16 @@ a, a:visited, a:active {
   border: none;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   .btn {
     width: 250px;
     font-size: 0.8rem;
   }
+}
+.btn:hover {
+  background-color: var(--button-hover-color);
 }
 
 .btn--small {
@@ -120,15 +125,22 @@ a, a:visited, a:active {
   margin-left: 1em;
   font-size: 0.8rem;
 }
+.btn--small:hover {
+  background-color: var(--button-hover-color);
+}
 
 .btn--header {
   width: 100%;
   max-width: 120px;
   padding: 0.5em;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--button-color);
   background-color: var(--font-color2);
   color: var(--font-color1);
   font-weight: 300;
+}
+.btn--header:hover {
+  background-color: var(--font-color2);
+  border: 2px solid var(--button-hover-color);
 }
 @media screen and (max-width: 767px) {
   .btn--header {
@@ -298,6 +310,9 @@ a, a:visited, a:active {
   width: 100px;
   height: auto;
   margin-top: 3em;
+}
+.footer__social:hover {
+  fill: var(--social-icon-hover);
 }
 .footer__section2 {
   overflow: hidden;

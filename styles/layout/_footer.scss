@@ -1,46 +1,18 @@
 @use "../globals/typography";
+@use '../utilities/mixins' as footer;
 
 
-
-@mixin footer-display-bg
-{
-    display: block;
-    max-width: 100%;
-    height: auto;
-    overflow: contain;
-}
-
-@mixin footer-no-display-bg
-{
-    display: none;
-   
-}
-
-// @mixin flex {
-//     display: flex;
-//      align-items: flex-start;
-//      justify-content: start;
-// }
-
-@mixin svgGrid{
-  
-    display: grid;
-    grid-template-columns: 20px 150px; 
-    grid-gap: 10px; 
-  
-  
-}
 
 .footer{
   &__mobile-top-img{
     
-    @include footer-no-display-bg();
+    @include footer.footer-no-display-bg();
      
     
  }
 
  &__desktop-top-img{
-    @include footer-display-bg();
+    @include footer.footer-display-bg();
   }
   
   
@@ -66,13 +38,13 @@
 
   &__container1{
    
-    @include svgGrid();
+    @include footer.contact();
     
 
   }
 
   &__container2{
-    @include svgGrid();
+    @include footer.contact();
   }
 
   &__container3{
@@ -83,6 +55,10 @@
     height: auto;
     margin-top: 3em;
    
+  }
+
+  &__social:hover{
+    fill: var(--social-icon-hover);
   }
 
   &__section2{
@@ -130,13 +106,13 @@
     
     &__mobile-top-img{
     
-      @include footer-display-bg();
+      @include footer.footer-display-bg();
        
       
    }
   
    &__desktop-top-img{
-    @include footer-no-display-bg();
+    @include footer.footer-no-display-bg();
       
     }
     
