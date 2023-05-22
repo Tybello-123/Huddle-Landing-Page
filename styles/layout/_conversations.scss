@@ -1,0 +1,37 @@
+
+
+
+@use '../utilities/mixins' as conversations;
+
+.conversations{
+
+    @include conversations.desktop-section-margins();
+  
+    &__container{
+        @include conversations.grid();
+      
+    }
+
+   &__image{
+       @include conversations.images();
+   }
+
+   @media screen and (max-width: 767px) {
+     
+    &__container{
+        @include conversations.mobile-grid();
+       
+    }
+
+    &__container1{
+        order: 2;
+    }
+
+    &__container2{
+        order: 1;
+    }
+
+
+   }
+  
+}

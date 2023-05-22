@@ -1,0 +1,100 @@
+.users {
+  margin: 10em 0;
+}
+.users__mobile-top-img {
+  display: none;
+}
+.users__desktop-top-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: contain;
+}
+.users__mobile-bottom-img {
+  display: none;
+}
+.users__desktop-bottom-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: contain;
+}
+.users__wrapper {
+  background-color: var(--very-pale-blue);
+}
+.users__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  gap: 10em;
+}
+.users__image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+@media screen and (max-width: 767px) {
+  .users__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    gap: 5em;
+  }
+  .users__image {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .users {
+    margin: 5em 0;
+  }
+  .users__mobile-top-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    overflow: contain;
+  }
+  .users__desktop-top-img {
+    display: none;
+  }
+  .users__mobile-bottom-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    overflow: contain;
+  }
+  .users__desktop-bottom-img {
+    display: none;
+  }
+  .users__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    gap: 5em;
+  }
+}

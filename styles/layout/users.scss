@@ -1,0 +1,87 @@
+@use '../utilities/mixins' as users;
+
+.users{
+
+    @include users.desktop-section-margins();
+   
+
+    &__mobile-top-img{
+    
+       @include users.no-display-bg();
+        
+       
+    }
+
+    &__desktop-top-img{
+       @include users.display-bg();
+     }
+
+
+     &__mobile-bottom-img{
+        @include users.no-display-bg();
+     }
+
+
+     &__desktop-bottom-img{
+        @include users.display-bg();
+     }
+
+     &__wrapper{
+        background-color: var(--very-pale-blue);
+     }
+
+  
+    &__container{
+        @include users.grid();
+      
+    }
+
+   &__image{
+       @include users.images();
+   }
+
+   @media screen and (max-width: 767px) {
+     
+    &__container{
+        @include users.mobile-grid();
+       
+    }
+
+   &__image{
+       @include users.mobile-images();
+   }
+   }
+
+   @media screen and (max-width: 320px){
+
+    @include users.mobile-section-margins();
+    
+    &__mobile-top-img{
+    
+        @include users.display-bg();
+        
+     }
+ 
+     &__desktop-top-img{
+        @include users.no-display-bg();
+
+      }
+ 
+ 
+      &__mobile-bottom-img{
+        @include users.display-bg();
+      }
+ 
+ 
+      &__desktop-bottom-img{
+        @include users.no-display-bg();
+      }
+
+      &__container{
+        @include users.mobile-grid();
+      
+    }
+    
+  }
+  
+}

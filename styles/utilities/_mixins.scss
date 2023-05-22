@@ -1,0 +1,93 @@
+
+//section mixins for the about and users background patters
+@mixin display-bg
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    overflow: contain;
+}
+
+@mixin no-display-bg
+{
+    display: none;
+   
+}
+
+
+//section mixins for the about , conversations and users desktop section
+
+@mixin grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 10em;
+}
+
+@mixin images{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+
+@mixin desktop-section-margins
+{
+    margin: 10em 0;
+}
+
+
+//section mixins for the about , conversations and users mobile section
+@mixin mobile-grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   margin: 0 auto;
+   width: 80%;
+    gap: 5em;
+}
+
+@mixin mobile-images{
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+}
+
+
+
+@mixin mobile-section-margins
+{
+    margin: 5em 0;
+}
+
+//mixin for footer background display
+
+@mixin footer-display-bg
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    overflow: contain;
+}
+
+@mixin footer-no-display-bg
+{
+    display: none;
+   
+}
+
+
+//mixin for contact display
+@mixin contact{
+  
+    display: grid;
+    grid-template-columns: 20px 150px; 
+    grid-gap: 10px; 
+  
+  
+}
